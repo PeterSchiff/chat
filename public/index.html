@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Arsen Socket.IO chat</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="add-user">
+                <form id="login-user" action="">
+                    <input id="nickname" type="text" placeholder="Enter a nickname" required />
+                    <button>Login</button>
+                </form>
+            </div>           
+            <div class="chat-wrapper">
+                <div id="chat">
+                    <ul id="messages"></ul>
+                    <p id="typing-info"></p>
+                    <form id="chat-form" action="">
+                        <input type="text" id="message" placeholder="Type in a message here" autocomplete="off" required />
+                        <button>Send</button>
+                    </form>
+                </div>
+                <aside id="users-list">
+                    <h3 id="users-list-header">Online</h3>
+                    <div id="users"></div>
+                </aside>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/main.js"></script>   
+    </body>
+</html>
